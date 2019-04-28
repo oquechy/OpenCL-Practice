@@ -2,9 +2,6 @@ __kernel void convolution(__global float *a, __global float *b, __global float *
     int row = get_global_id(0);
     int col = get_global_id(1);
 
-    if (row >= n || col >= n)
-        return;
-
     float sum = 0;
     int hm = (m - 1) / 2;
 
